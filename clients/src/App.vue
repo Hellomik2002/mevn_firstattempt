@@ -1,16 +1,22 @@
 <template>
     <div id="have">
-        <h1>SHow</h1>
-        <router-view></router-view> 
+        <router-view> </router-view> 
+        
+      <!--<PostComponent/>-->
     </div>
+    
 </template>
 
 <script>
-export default {};
+import PostComponent from '@/views/PostComponents'
+export default {
+  name: 'app',
+  components:{
+    PostComponent
+  },
+};
 </script>
 
 <style scoped>
-  *{
-    color: brown;
-  }
+  
 </style>

@@ -1,21 +1,23 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Hello from '@/views/Hello.vue'
-import Posts from '@/views/Posts.vue'
+import main_vue from "@/views/PostComponents.vue" 
+import second_vue from "@/views/pop.vue"
 Vue.use(Router);
 
 export default new Router({
-  routes:[
+  mode: "history",
+  routes: [
     {
-      path:"/",
-      component:Hello,
+      path: "/op",
+      component:main_vue, 
+      children:[
+        {
+          path:'beka',
+          component:second_vue,
+        },
+      ]
       //props:{name: "ok"}
-    }
-    ,
-    {
-      path:"/posts",
-      name: "Posts",
-      component:  Posts 
-  }
+    },/*path:"/eiuwaieu?oods" */
+    
   ]
 });
